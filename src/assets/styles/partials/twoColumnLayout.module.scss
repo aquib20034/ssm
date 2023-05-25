@@ -1,0 +1,41 @@
+.twoColumnLayout {
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 1640px;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: calc(25% - 15px) calc(75% - 15px);
+    gap: 30px;
+
+    @media only screen and (max-width: 1440px) {
+      grid-template-columns: calc(30% - 10px) calc(70% - 10px);
+      gap: 20px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+  }
+
+  &__left {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+    @media only screen and (max-width: 1200px) {
+      grid-row: 2 / span 1;
+    }
+  }
+
+  &__right {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+
+    @media only screen and (max-width: 1200px) {
+      grid-column: 1 / span 1;
+    }
+  }
+}

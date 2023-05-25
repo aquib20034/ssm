@@ -1,0 +1,84 @@
+@import "@/assets/styles/partials/mixins.scss";
+
+.buttonS2 {
+  @include buttonReset();
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 110px;
+  color: var(--white);
+  padding: 5px 12px;
+  border-radius: 25px;
+  background-color: var(--primaryColor);
+  transition: background-color var(--transition-short) linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    background-color: var(--primaryDarkColor);
+  }
+
+  &__title {
+    font-size: 18px;
+    font-family: var(--font-family-1);
+    font-weight: 400;
+    line-height: 1.2em;
+    color: inherit;
+    white-space: nowrap;
+    transition: color var(--transition-short) linear;
+  }
+
+  &__icon {
+    font-size: 10px;
+    color: inherit;
+    margin-left: 10px;
+  }
+
+  // &--primary {
+  //   color: var(--white);
+  //   background-color: var(--primaryColor);
+
+  //   &:active,
+  //   &:focus,
+  //   &:hover {
+  //     color: var(--white);
+  //     background-color: var(--primaryDarkColor);
+  //   }
+  // }
+
+  &--secondary {
+    color: var(--white);
+    background-color: var(--secondaryColor);
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--white);
+      background-color: var(--secondaryDarkColor);
+    }
+  }
+
+  &--green {
+    color: var(--white);
+    background-color: var(--greenColor);
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--white);
+      background-color: var(--greenDarkColor);
+    }
+  }
+
+  &--disabled {
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+      cursor: not-allowed;
+      color: var(--white);
+      background-color: var(--lightGreyColor);
+    }
+  }
+}

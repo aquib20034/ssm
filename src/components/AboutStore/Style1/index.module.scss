@@ -1,0 +1,158 @@
+@import "@/assets/styles/partials/mixins";
+
+.aboutStoreS1 {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 32% 68%;
+    gap: 0;
+    border-radius: 10px;
+    background-color: var(--white);
+
+    @media only screen and (max-width: 1200px) {
+      grid-template-columns: 1fr;
+      background-color: transparent;
+    }
+  }
+
+  &__left {
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__right {
+    @media only screen and (max-width: 1200px) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  .tabList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 40px;
+    height: 100%;
+    max-height: 330px;
+    overflow: auto;
+
+    &__item {
+      display: inline-block;
+    }
+
+    &__btn {
+      // Reset
+      appearance: none;
+      outline: none;
+      border: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+
+      font-size: 16px;
+      font-family: var(--font-family-1);
+      font-weight: 500;
+      line-height: 1.2em;
+      color: var(--primaryTextColor);
+      text-align: left;
+      transition: color var(--transition-short) linear;
+
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        color: var(--greyColor);
+      }
+
+      &--active {
+        color: var(--primaryColor) !important;
+      }
+    }
+  }
+
+  .tabItem {
+    padding: 40px 40px;
+    height: 100%;
+    max-height: 330px;
+    overflow: auto;
+
+    @media only screen and (max-width: 1200px) {
+      height: auto;
+      max-height: unset;
+      background-color: var(--white);
+      border-radius: 10px;
+      padding: 15px 15px;
+    }
+
+    &:not(.tabItem--active) {
+      @media only screen and (min-width: 1201px) {
+        display: none;
+      }
+    }
+
+    // &__wrapper {}
+
+    &__top {
+      display: none;
+
+      @media only screen and (max-width: 1200px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        cursor: pointer;
+        outline: none;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      font-family: var(--font-family-1);
+      font-weight: 400;
+      line-height: 1.35em;
+      color: var(--primaryTextColor);
+      @include trim(1);
+    }
+
+    &__icon {
+      font-size: 8px;
+      color: var(--primaryColor);
+      transition: transform var(--transition-short) linear;
+    }
+
+    &__bottom {
+      transition: padding-top var(--transition-short) linear,
+        max-height var(--transition-long) linear;
+
+      @media only screen and (max-width: 1200px) {
+        padding-top: 0;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      p {
+        font-size: 16px;
+        font-family: var(--font-family-1);
+        font-weight: 400;
+        line-height: 1.35em;
+        color: var(--greyColor);
+      }
+    }
+
+    &--active {
+      .tabItem__icon {
+        transform: rotate(180deg);
+        transform-origin: center;
+      }
+
+      .tabItem__bottom {
+        @media only screen and (max-width: 1200px) {
+          padding-top: 20px;
+          max-height: 1500px;
+        }
+      }
+    }
+  }
+}

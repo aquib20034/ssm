@@ -1,0 +1,61 @@
+.headingS1 {
+  font-family: var(--font-family-1);
+
+  &--tiny {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5em;
+  }
+
+  &--small {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5em;
+  }
+
+  &--medium {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25em;
+  }
+
+  &--large {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25em;
+  }
+
+  &--huge {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.25em;
+  }
+
+  &--default {
+    color: var(--primaryTextColor);
+  }
+
+  &--primary {
+    color: var(--primaryColor);
+  }
+
+  &--secondary {
+    color: var(--secondaryColor);
+  }
+
+  &--disabled {
+    color: var(--greyColor);
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}

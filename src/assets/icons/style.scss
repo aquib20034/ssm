@@ -1,0 +1,110 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?6i5zad');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?6i5zad#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?6i5zad') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?6i5zad') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?6i5zad##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="x_"], [class*=" x_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.x_arrow-down-1 {
+  &:before {
+    content: $x_arrow-down-1; 
+  }
+}
+.x_arrow-right-1 {
+  &:before {
+    content: $x_arrow-right-1; 
+  }
+}
+.x_check-1 {
+  &:before {
+    content: $x_check-1; 
+  }
+}
+.x_facebook-1 {
+  &:before {
+    content: $x_facebook-1; 
+  }
+}
+.x_globe-1 {
+  &:before {
+    content: $x_globe-1; 
+  }
+}
+.x_heart-1 {
+  &:before {
+    content: $x_heart-1; 
+  }
+}
+.x_info-circle-1 {
+  &:before {
+    content: $x_info-circle-1; 
+  }
+}
+.x_instagram-1 {
+  &:before {
+    content: $x_instagram-1; 
+  }
+}
+.x_linkedin-1 {
+  &:before {
+    content: $x_linkedin-1; 
+  }
+}
+.x_location-pin-1 {
+  &:before {
+    content: $x_location-pin-1; 
+  }
+}
+.x_menu-1 {
+  &:before {
+    content: $x_menu-1; 
+  }
+}
+.x_phone-1 {
+  &:before {
+    content: $x_phone-1; 
+  }
+}
+.x_search-1 {
+  &:before {
+    content: $x_search-1; 
+  }
+}
+.x_star-filled {
+  &:before {
+    content: $x_star-filled; 
+  }
+}
+.x_star-unfilled {
+  &:before {
+    content: $x_star-unfilled; 
+  }
+}
+.x_twitter-1 {
+  &:before {
+    content: $x_twitter-1; 
+  }
+}
+

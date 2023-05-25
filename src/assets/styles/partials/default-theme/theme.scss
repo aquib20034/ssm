@@ -1,0 +1,127 @@
+// Body
+$bodyColor: #f6f6f6;
+
+// Theme
+$primaryDarkColor: #00a2ab;
+$primaryColor: #20b9c1;
+$secondaryColor: #0080c3;
+$secondaryDarkColor: #26007b;
+$tertiaryColor: #cfae42;
+
+//Transitions
+$transition-short: 0.2s;
+$transition: 0.4s;
+$transition-long: 0.6s;
+
+// Spacing & Gaps
+$gap: 10px;
+
+// Miscellaneous
+$primaryTextColor: #515151;
+$greyColor: #b0b0b0;
+$lightGreyColor: #d7d7d7;
+$darkGreyColor: #787878;
+$borderColor: #e0e0e0;
+
+// Extras
+$greenColor: #00e396;
+$greenDarkColor: #01ad74;
+
+// Defaults
+$success: #2e7d32 !default;
+$info: #0288d1 !default;
+$warning: #ed6c02 !default;
+$danger: #eb0014 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "bodyColor": $bodyColor,
+    "primaryColor": $primaryColor,
+    "primaryDarkColor": $primaryDarkColor,
+    "secondaryColor": $secondaryColor,
+    "secondaryDarkColor": $secondaryDarkColor,
+    "tertiaryColor": $tertiaryColor,
+    "primaryTextColor": $primaryTextColor,
+    "greyColor": $greyColor,
+    "lightGreyColor": $lightGreyColor,
+    "darkGreyColor": $darkGreyColor,
+    "borderColor": $borderColor,
+    "greenColor": $greenColor,
+    "greenDarkColor": $greenDarkColor,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "transition-short": $transition-short,
+    "transition": $transition,
+    "transition-long": $transition-long,
+    "gap": $gap,
+  ),
+  $theme-colors
+);
+
+/* ================================
+      Grey Shades Theme Color
+=================================== */
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    "white": $white,
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900,
+    "black": $black,
+  ),
+  $grays
+);
+
+// -----------------------------------------/
+
+/* ================================
+      Social Media Theme Color
+=================================== */
+
+// $facebook: #1877f2; // Facebook Brand Color
+$facebook: #4267b2; // Facebook Log In Button Color
+$twitter: #1da1f2;
+$instagram: #dd2a7b;
+$linkedin: #0a66c2;
+$google-plus: #dd4d40;
+$pinterest: #e56262;
+$youtube: #d8362a;
+
+$socialMediaThemeColor: () !default;
+$socialMediaThemeColor: map-merge(
+  (
+    "facebook": $facebook,
+    "twitter": $twitter,
+    "instagram": $instagram,
+    "linkedin": $linkedin,
+    "google-plus": $google-plus,
+    "pinterest": $pinterest,
+    "youtube": $youtube,
+  ),
+  $socialMediaThemeColor
+);
+
+// -----------------------------------------/

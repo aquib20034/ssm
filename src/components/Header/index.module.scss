@@ -1,0 +1,144 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  &__wrapper {
+    background-color: var(--bodyColor);
+
+    @media only screen and (max-width: 1200px) {
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+  }
+
+  &__bottom {
+    width: 100%;
+    background-color: var(--primaryColor);
+
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 288px;
+
+    @media only screen and (max-width: 1440px) {
+      width: 200px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      width: 33px;
+    }
+
+    & picture {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 0;
+      padding: 0 0 calc(100% * 55 / 288) 0;
+      overflow: hidden;
+
+      @media only screen and (max-width: 1200px) {
+        padding: 0 0 100% 0;
+      }
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+  }
+
+  &__search {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__ctaBtns {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      width: 121px;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__mobileMenu {
+    display: none;
+    font-size: 18px;
+    color: var(--primaryTextColor);
+    transition: color var(--transition-short) linear;
+
+    @media only screen and (max-width: 1200px) {
+      display: block;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      cursor: pointer;
+      color: var(--primaryColor);
+    }
+  }
+
+  &__navigation {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__socialLinks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & > *:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

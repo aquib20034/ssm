@@ -1,0 +1,111 @@
+.newsletterS1 {
+  padding: 22px 0;
+  background-color: var(--primaryDarkColor);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    margin-right: 60px;
+
+    @media only screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 25px;
+      font-family: var(--font-family-1);
+      font-weight: 700;
+      line-height: 1.5em;
+      color: var(--white);
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 20px;
+      }
+
+      span {
+        @media only screen and (max-width: 768px) {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  // &__right {}
+
+  // &__form {}
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 598px;
+    border-radius: 26px;
+    overflow: hidden;
+    background-color: var(--white);
+    outline: none;
+    border: none;
+
+    input {
+      appearance: none;
+      outline: none;
+      border: none;
+      margin: 0;
+      background-color: var(--white);
+
+      flex: 1;
+      font-size: 18px;
+      font-family: var(--font-family-1);
+      font-weight: 400;
+      line-height: 1.35em;
+      color: var(--lightGreyColor);
+      padding: 12px 22px;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 14px;
+        padding: 12px 16px;
+      }
+    }
+
+    button {
+      appearance: none;
+      outline: none;
+      border: none;
+      margin: 0;
+      background-color: var(--primaryColor);
+
+      font-size: 18px;
+      font-family: var(--font-family-1);
+      font-weight: 400;
+      line-height: 1.35em;
+      text-transform: uppercase;
+      color: var(--white);
+      padding: 13px 45px;
+      border-radius: 26px;
+      transition: background-color var(--transition-short) linear;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 14px;
+        padding: 12px 12px;
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        background-color: var(--primaryDarkColor);
+      }
+    }
+  }
+}

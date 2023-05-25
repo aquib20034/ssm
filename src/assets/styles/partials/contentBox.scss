@@ -1,0 +1,30 @@
+/* ------------------------- */
+/* ---- Sidebar Classes ---- */
+/* ------------------------- */
+.contentBox {
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: var(--white);
+
+  .contentBox__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .contentBox__flexList {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: -5px -5px;
+
+    &--spaceBetween {
+      justify-content: space-between;
+    }
+
+    & > * {
+      padding: 5px 5px;
+    }
+  }
+}

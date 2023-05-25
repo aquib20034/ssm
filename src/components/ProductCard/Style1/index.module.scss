@@ -1,0 +1,116 @@
+@import "@/assets/styles/partials/mixins.scss";
+
+.productCardS1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &__thumbnail {
+    & figure {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding: 0 0 calc(100% * 150 / 387) 0;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    padding: 20px 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--white);
+  }
+
+  //   &__top {}
+
+  &__mid {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__tag {
+    font-size: 14px;
+    font-family: var(--font-family-1);
+    font-weight: 600;
+    line-height: 1.2em;
+    color: var(--greyColor);
+
+    &--primary {
+      color: var(--primaryColor);
+    }
+
+    &--secondary {
+      color: var(--secondaryColor);
+    }
+
+    &--green {
+      color: var(--greenColor);
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid var(--borderColor);
+
+    & figure {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding: 0 0 100% 0;
+      border-radius: inherit;
+      overflow: hidden;
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        border-radius: inherit;
+      }
+    }
+  }
+
+  &__title {
+    @include trim(2);
+  }
+
+  &__activeCount {
+    font-size: 12px;
+    font-family: var(--font-family-1);
+    font-weight: 600;
+    line-height: 1.2em;
+    color: var(--greyColor);
+  }
+
+  &__cta {
+    width: fit-content;
+  }
+}

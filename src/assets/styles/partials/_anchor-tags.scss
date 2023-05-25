@@ -1,0 +1,68 @@
+/* -------------------------------------- */
+/* --------- Anchor Tag Style 1 --------- */
+/* -------------------------------------- */
+.anchorTagS1 {
+  // Reset
+  appearance: none;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  display: inline-block;
+  font-size: 16px;
+  font-family: var(--font-family-1);
+  font-weight: 400;
+  line-height: 1.6em;
+  color: var(--primaryColor);
+  transition: color var(--transition-short) linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    cursor: pointer;
+    color: var(--secondaryColor);
+  }
+}
+/* -------------------------------------- */
+
+/* -------------------------------------- */
+/* --------- Anchor Tag Style 2 --------- */
+/* -------------------------------------- */
+.anchorTagS2 {
+  // Reset
+  appearance: none;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  display: inline-block;
+  font-size: 16px;
+  font-family: var(--font-family-1);
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: center;
+  color: var(--primaryTextColor);
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  background-color: var(--white);
+  transition: color var(--transition-short) linear,
+    background-color var(--transition-short) linear,
+    border var(--transition-short) linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+  }
+}
+/* -------------------------------------- */

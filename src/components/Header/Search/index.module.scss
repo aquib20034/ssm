@@ -1,0 +1,61 @@
+@import "@/assets/styles/partials/mixins.scss";
+
+.search {
+  width: 100%;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--borderColor);
+    border-radius: 26px;
+    overflow: hidden;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+
+    & span {
+      font-size: 13px;
+      color: var(--white);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding-left: 43px;
+
+    & input {
+      appearance: none;
+      outline: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+
+      display: inline-block;
+      width: 100%;
+      border-radius: inherit;
+      background-color: var(--bodyColor);
+
+      font-size: 16px;
+      font-family: var(--font-family-1);
+      font-weight: 400;
+      line-height: 1.2em;
+      color: var(--primaryTextColor);
+      padding: 15px 15px;
+
+      @include placeholder {
+        color: var(--greyColor);
+      }
+    }
+  }
+}

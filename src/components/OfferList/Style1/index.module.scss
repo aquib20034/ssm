@@ -1,0 +1,29 @@
+.offerList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  .item {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 16px;
+    align-items: center;
+
+    &__icon {
+      align-self: flex-start;
+      padding-top: 5px;
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+
+    &__value {
+      font-weight: 700;
+      color: var(--primaryColor);
+    }
+  }
+}

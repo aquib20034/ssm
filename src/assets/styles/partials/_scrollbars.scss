@@ -1,0 +1,28 @@
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primaryColor) var(--darkGreyColor);
+}
+
+/* Works on Chrome, Opera, Edge, and Safari */
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--darkGreyColor);
+
+  &-track {
+    // border-radius: .5rem;
+    background-color: var(--darkGreyColor);
+  }
+
+  &-thumb {
+    height: 8px;
+    border-radius: 0px;
+    background: var(--primaryColor);
+  }
+
+  &-corner {
+    background-color: var(--darkGreyColor);
+  }
+}

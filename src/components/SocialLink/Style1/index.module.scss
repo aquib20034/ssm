@@ -1,0 +1,27 @@
+.socialLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--primaryColor);
+  transition: color var(--transition-short) linear,
+    background-color var(--transition-short) linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--primaryDarkColor);
+  }
+
+  &__icon {
+    font-size: 12px;
+    color: inherit;
+  }
+}

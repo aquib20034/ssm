@@ -1,0 +1,36 @@
+.contactList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+
+  //   &__item {}
+
+  .item {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 20px;
+    align-items: center;
+
+    &__icon {
+      font-size: 16px;
+      color: var(--primaryColor);
+      align-self: flex-start;
+      padding-top: 5px;
+    }
+
+    // &__text {}
+
+    &__link {
+      color: var(--secondaryColor);
+      transition: color var(--transition-short) linear;
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        color: var(--primaryColor);
+      }
+    }
+  }
+}

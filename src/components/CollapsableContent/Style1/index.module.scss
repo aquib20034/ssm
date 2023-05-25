@@ -1,0 +1,33 @@
+.collapsableContentS1 {
+  // &__wrapper {}
+
+  // &__heading {}
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--borderColor);
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  // &__content {}
+
+  &__typography {
+    max-height: calc(1.4em * 3);
+    overflow: hidden;
+    transition: max-height var(--transition-long) ease-out;
+
+    &.expanded {
+      max-height: 800px;
+      overflow: auto;
+    }
+  }
+
+  &__btn {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

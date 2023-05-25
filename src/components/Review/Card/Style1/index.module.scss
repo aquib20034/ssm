@@ -1,0 +1,214 @@
+@import "@/assets/styles/partials/mixins";
+
+.reviewS1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &__wrapper {
+    position: relative;
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+
+    &--expanded {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  //   &__mid {}
+
+  &__bottom {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 5;
+
+    padding: 0 20px 20px 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--white);
+
+    &--expanded {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    font-family: var(--font-family-1);
+    font-weight: 600;
+    line-height: 1.35em;
+    color: var(--greyColor);
+    padding: 20px 0;
+  }
+
+  &__cta {
+    button {
+      // Reset
+      appearance: none;
+      outline: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      color: var(--greyColor);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      transition: color var(--transition-short) linear;
+
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        color: var(--primaryTextColor);
+      }
+
+      .text {
+        font-size: 12px;
+        font-family: var(--font-family-1);
+        font-weight: 600;
+        line-height: 1.35em;
+        color: inherit;
+        margin-right: 10px;
+      }
+
+      .icon {
+        font-size: 8px;
+        color: inherit;
+        transition: transform var(--transition-short) linear;
+
+        &--rotated {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+
+    &__avatar {
+      display: block;
+      width: 48px;
+      margin-right: 10px;
+
+      figure {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding: 0 0 calc(100%) 0;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: inherit;
+        }
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+      font-family: var(--font-family-1);
+      font-weight: 500;
+      line-height: 1.2em;
+      color: var(--primaryTextColor);
+      @include trim(1);
+    }
+  }
+
+  .rating {
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      margin: -2px -2px;
+
+      & > * {
+        padding: 2px 2px;
+      }
+    }
+
+    &__icon {
+      font-size: 12px;
+      color: var(--lightGreyColor);
+
+      //   &:hover {
+      //     outline: none;
+      //     cursor: pointer;
+      //   }
+
+      &--active {
+        color: var(--primaryColor);
+      }
+    }
+  }
+
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    &__item {
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+
+      figure {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding: 0 0 calc(100% * 170 / 105) 0;
+        overflow: hidden;
+        border-radius: inherit;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#515151, 0.65);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 28px;
+      font-family: var(--font-family-1);
+      font-weight: 600;
+      line-height: 1.2em;
+      color: var(--white);
+    }
+  }
+}
